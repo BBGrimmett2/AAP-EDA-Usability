@@ -6,7 +6,8 @@
         limit: 5
   rules:
     - name: Controller Rule
-      condition: event.i == 1 
+      condition: event.i == 1
       action:
-        debug:
-          var: event
+        run_job_template:
+          name: "Demo Job Template"
+          organization: Default
